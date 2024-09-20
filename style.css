@@ -1,0 +1,513 @@
+/* Basic Reset */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oxygen", sans-serif;
+    color: #faf5ff;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+    color: #ff6600;
+}
+
+.navbar-search-signup {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-search {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-search input[type="text"] {
+    width: 180px; /* Adjust width as needed */
+    padding: 8px 12px 8px 40px; /* Increase padding-left for icon space */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    height: 40px; /* Set height of the input */
+}
+
+.navbar-search input[type="text"]::placeholder {
+    color: #828282;
+}
+
+.navbar-search img {
+    position: absolute;
+    right: 20px; /* Position the icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Adjust icon size as needed */
+    height: 20px;
+    pointer-events: none; /* Ensure the icon doesn’t block input clicks */
+}
+
+.navbar-signup a {
+    background-color: #ff6600;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-signup a:hover {
+    background-color: #e65c00;
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+    background: linear-gradient(135deg, #E0EAF3, #CFDEF3);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+}
+
+/* Products Section Styling */
+.products-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Reduced gap between cards */
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 480px;
+    max-width: 350px; /* Reduced width of the card */
+    margin: 0 auto; /* Center the card in the grid */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    display: block;
+}
+
+.product-info {
+    padding: 15px; /* Reduced padding inside the card */
+    text-align: center;
+}
+
+.product-info h2 {
+    font-size: 18px; /* Reduced font size */
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    font-size: 16px; /* Reduced font size */
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-info a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.product-info a:hover {
+    color: #e65c00;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: translateY(-8px); /* Slightly reduced lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly reduced shadow */
+}
+/* Promotions Section Styling */
+.promotions-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks within the container */
+}
+
+.promotions-container {
+    display: inline-flex; /* Use inline-flex to allow horizontal scrolling */
+    gap: 15px; /* Space between the cards */
+}
+
+.promotion-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px; /* Increased card width */
+    display: inline-block; /* Ensure cards are displayed inline for scrolling */
+}
+
+.promotion-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.promotion-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.promotion-info h2 {
+    font-size: 20px; /* Adjusted font size */
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.promotion-info p {
+    font-size: 18px; /* Adjusted font size */
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.promotion-info a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.promotion-info a:hover {
+    color: #e65c00;
+}
+
+/* Hover Effect */
+.promotion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* About Us Section Styling */
+.aboutus-section {
+    padding: 40px 20px;
+    /* background-color: #E0EAF3; */
+    color: #333;
+}
+
+.aboutus-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aboutus-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2A3F54;
+}
+
+.aboutus-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.aboutus-container p:last-child {
+    margin-bottom: 0;
+}
+/* Reviews Section Styling */
+.reviews-section {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    color: #2A3F54;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Reviews Grid Layout */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Review Card Styling */
+.review-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.review-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.review-card span {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    display: block;
+    text-align: right;
+}
+
+/* Contact Us Section Styling */
+.contactus-section {
+    /* background: linear-gradient(135deg, #E0EAF3, #CFDEF3); */
+    padding: 6% 20px;
+    border-radius: 12px;
+    /* margin-top: 3%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactus-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 10px 20px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactus-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contactus-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+    background-color: #fff;
+}
+
+.contact-btn {
+    width: 70%;
+    background-color: #ff6600;
+    color: #FFF;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    background-color: #d75814;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer Styling */
+/* Footer Styling */
+.footer {
+    background: linear-gradient(135deg, #2A3F54, #1F2A40);
+    color: #fff;
+    padding: 1.8%;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #f2f2f2;
+}
+
+.footer-logo p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b5b5b5;
+}
+
+.footer-social h3,
+.footer-links h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    /* filter: brightness(4) invert(0); */
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+    filter: brightness(0.7) invert(1);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+}
+
+.footer-links ul li a {
+    color: #b5b5b5;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.6s ease, padding-left 0.7s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ff6600;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1B2735;
+    font-size: 15px;
+    border-radius: 25px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #b5b5b5;
+}
+
